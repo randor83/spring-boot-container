@@ -2,10 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/randor-spring-boot-container/spring-boot-container-test', '.']
+  args: ['build', '-t', 'gcr.io/plated-courier-230214/spring-boot-container-test', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/randor-spring-boot-container/spring-boot-container-test:latest']
+  args: ['push', 'gcr.io/plated-courier-230214/spring-boot-container-test']
 options:
   machineType: 'N1_HIGHCPU_8' # HIGHCPU로 빌드 스피드 업
 timeout: 1000s # 빌드 자체에 대한 타임 아웃
