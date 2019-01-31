@@ -6,6 +6,17 @@ steps:
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/plated-courier-230214/spring-boot-container-test']
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: 
+  - set
+  - image
+  - deployment/spring-boot-container
+  - spring-boot-container-test=gcr.io/plated-courier-230214/spring-boot-container-test
+  - -n
+  - spring-boot
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=spring-boot-container-cluster'
 options:
   machineType: 'N1_HIGHCPU_8' # HIGHCPU로 빌드 스피드 업
 timeout: 1000s # 빌드 자체에 대한 타임 아웃
