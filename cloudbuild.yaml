@@ -11,7 +11,7 @@ steps:
   - set
   - image
   - deployment/spring-boot-contatiner
-  - spring-boot-container-test=gcr.io/plated-courier-230214/spring-boot-container-test
+  - spring-boot-contatiner=gcr.io/plated-courier-230214/spring-boot-container-test
   - -n
   - spring-boot
   env:
