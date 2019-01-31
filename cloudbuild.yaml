@@ -10,7 +10,7 @@ steps:
   args: 
   - set
   - image
-  - deployment/spring-boot-container-test
+  - deployment/spring-boot-contatiner
   - spring-boot-container-test=gcr.io/plated-courier-230214/spring-boot-container-test
   - -n
   - spring-boot
