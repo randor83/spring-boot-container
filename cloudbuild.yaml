@@ -15,7 +15,7 @@ steps:
   - -n
   - spring-boot
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=asia-northeast1-b'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=spring-boot-contatiner-cluster'
 options:
   machineType: 'N1_HIGHCPU_8' # HIGHCPU로 빌드 스피드 업
